@@ -12,27 +12,58 @@
         </div>
       </div>
     </div>
-
-    <q-page class="row shadow-4">
-      <div class="col-12 text-center q-gutter-lg" style="padding-top:150px">
-        <q-btn round size="20px" color="white"><span class="text-grey" style="font-size: 16pt">1</span></q-btn>
-        <q-btn round size="20px" color="white"><span class="text-grey" style="font-size: 16pt">2</span></q-btn>
-        <q-btn round size="20px" color="white"><span class="text-grey" style="font-size: 16pt">3</span></q-btn>
+  </q-header>
+  <q-page-container>
+    <q-page class="shadow-4">
+      <div class="col-12 q-m-xs text-center q-gutter-lg" style="padding: 100px 0 20px 0">
+        <q-btn round size="20px" color="white"
+          ><span class="text-grey" style="font-size: 16pt">1</span></q-btn
+        >
+        <q-btn round size="20px" color="white"
+          ><span class="text-grey" style="font-size: 16pt">2</span></q-btn
+        >
+        <q-btn round size="20px" color="white"
+          ><span class="text-grey" style="font-size: 16pt">3</span></q-btn
+        >
       </div>
-      <div class="col-12 text-center q-gutter-lg ">
-        <q-btn round size="20px" color="white"><span class="text-grey" style="font-size: 16pt">4</span></q-btn>
-        <q-btn round size="20px" color="white"><span class="text-grey" style="font-size: 16pt">5</span></q-btn>
-        <q-btn round size="20px" color="white"><span class="text-grey" style="font-size: 16pt">6</span></q-btn>
+      <div class="col-12 text-center q-gutter-lg" style="padding: 0px 0 20px 0">
+        <q-btn round size="20px" color="white"
+          ><span class="text-grey" style="font-size: 16pt">4</span></q-btn
+        >
+        <q-btn round size="20px" color="white"
+          ><span class="text-grey" style="font-size: 16pt">5</span></q-btn
+        >
+        <q-btn round size="20px" color="white"
+          ><span class="text-grey" style="font-size: 16pt">6</span></q-btn
+        >
+      </div>
+      <div class="col-12 text-center q-gutter-lg" style="padding: 0px 0 20px 0">
+        <q-btn round size="20px" color="primary"
+          ><span class="text-grey" style="font-size: 16pt">7</span></q-btn
+        >
+        <q-btn round size="20px" color="primary"
+          ><span class="text-grey" style="font-size: 16pt">8</span></q-btn
+        >
+        <q-btn round size="20px" color="primary"
+          ><span class="text-grey" style="font-size: 16pt">9</span></q-btn
+        >
       </div>
       <div class="col-12 text-center q-gutter-lg">
-        <q-btn round size="20px" color="primary"><span class="text-grey" style="font-size: 16pt">7</span></q-btn>
-        <q-btn round size="20px" color="primary"><span class="text-grey" style="font-size: 16pt">8</span></q-btn>
-        <q-btn round size="20px" color="primary"><span class="text-grey" style="font-size: 16pt">9</span></q-btn>
-      </div>
-      <div class="col-12 text-center q-gutter-lg">
-        <q-btn round size="20px" flat disable style="box-shadow: 0" color="white"><span style="font-size: 16pt">7</span></q-btn>
-        <q-btn round size="20px" color="primary"><span class="text-grey" style="font-size: 16pt">8</span></q-btn>
-        <q-btn round size="20px" color="primary"><span class="text-grey" style="font-size: 16pt">9</span></q-btn>
+        <q-btn
+          round
+          size="20px"
+          flat
+          disable
+          style="box-shadow: 0"
+          color="white"
+          ><span style="font-size: 16pt">7</span></q-btn
+        >
+        <q-btn round size="20px" color="primary"
+          ><span class="text-grey" style="font-size: 16pt">8</span></q-btn
+        >
+        <q-btn round size="20px" color="primary"
+          ><span class="text-grey" style="font-size: 16pt">9</span></q-btn
+        >
       </div>
       <q-page-sticky position="bottom-right" :offset="[35, 10]">
         <q-btn
@@ -44,7 +75,7 @@
         />
       </q-page-sticky>
     </q-page>
-  </q-header>
+  </q-page-container>
 </template>
 
 <script>
@@ -58,11 +89,11 @@ export default defineComponent({
 <style lang="sass">
 .q-header
   height: 250px
-  width: 100%
-  position: fixed
+  z-index: 0
 .q-page
-  position: fixed
-  top: 200px
+  position: relative
+  top: -50px
+  z-index: 1
   margin: 0 auto
   width: 92%
   background-color: white
